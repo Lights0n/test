@@ -26,3 +26,4 @@ form.addEventListener('submit', function (evt) {
   request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
   request.send('name=' + encodeURIComponent(formData.name) + '&email=' + encodeURIComponent(formData.email));
 });
+

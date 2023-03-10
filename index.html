@@ -6,17 +6,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- meta-content -->
-  <meta name="description" content="???THIS WEB-SITE IS ABOUT YOUR NEW CAREER STEP">
-  <meta name="keywords" content="???web-programming, front-end, HTML, CSS, JS">
+  <meta name="description" content="Its time to play!">
+  <meta name="keywords" content="fun, front-end, joy, CSS, JS">
   <!-- FONT HERE -->
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,regular,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular&display=swap" rel="stylesheet">
   <!-- FAVICON HERE -->
-  <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
-  <link type="Image/x-icon" href="/favicon.ico" rel="icon">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
 
-  <title>???</title>
+  <title>Sex with animation</title>
 </head>
 
 <body>
@@ -105,16 +105,16 @@
           <div class="form__passwords block">
             <div class="form__password-body">
               <label for="password" class="form__label ">Password</label>
-              <input id="password" type="password"
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$" class="form__input"
-                oninvalid="this.setCustomValidity('Пароль пользователя должен содержать от 8 символов, заглавные и строчные буквы, а также цифры.')"
+              <input id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[?!@#$%^&*_=+-]).{8,}"
+                class="form__input"
+                oninvalid="this.setCustomValidity('Пароль пользователя должен содержать от 8 символов, заглавные и строчные буквы, а также цифры и минимум один символ ?!@#$%^&*_=+-')"
                 name="password" required>
             </div>
             <div class="form__confirm-body">
               <label for="confirm" class="form__label ">Confirm password</label>
-              <input id="confirm" type="password"
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$" class="form__input"
-                oninvalid="this.setCustomValidity('Пароль пользователя должен содержать от 8 символов, заглавные и строчные буквы, а также цифры.')"
+              <input id="confirm" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[?!@#$%^&*_=+-]).{8,}"
+                class="form__input"
+                oninvalid="this.setCustomValidity('Пароль пользователя должен содержать от 8 символов, заглавные и строчные буквы, а также цифры и минимум один символ ?!@#$%^&*_=+-')"
                 name="conf-password" required>
             </div>
           </div>

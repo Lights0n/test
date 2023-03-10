@@ -114,10 +114,12 @@ body {
 }
 .block {
    position: relative;
+   opacity: 0;
    z-index: 2;
    display: flex;
    margin-top: 15px;
    gap: 13px;
+
    * {
       width: 100%;
    }
@@ -125,6 +127,20 @@ body {
       flex-direction: column;
    }
 }
+
+.show {
+   opacity: 1;
+   animation: show 2s;
+}
+@keyframes show {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
 .form {
    position: relative;
    &__bgimage {
@@ -178,16 +194,13 @@ body {
       border-bottom: 0.7px solid #f2f2f2;
       outline: none;
       background-color: transparent;
+   }
 
-      // &::before {
-      //    position: absolute;
-      //    right: 0;
-      //    top: 50%;
-      //    background-image: url("./assets/arrow.svg");
-      //    width: 8px;
-      //    height: 4px;
-      //    content: "";
-      // }
+   &__input:-webkit-autofill,
+   &__input:-webkit-autofill:hover,
+   &__input:-webkit-autofill:focus,
+   &__input:-webkit-autofill:active {
+      transition: background-color 5000000s ease-in-out 0s;
    }
 
    &__l-name-body {
@@ -335,4 +348,24 @@ body {
    line-height: 115%;
 
    color: #111111;
+}
+
+.shake {
+   animation-name: shake;
+   animation-duration: 0.5s;
+   animation-fill-mode: both;
+}
+@keyframes shake {
+   0%,
+   100% {
+      transform: translateX(0);
+   }
+   20%,
+   60% {
+      transform: translateX(-6px);
+   }
+   40%,
+   80% {
+      transform: translateX(6px);
+   }
 }

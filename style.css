@@ -141,6 +141,7 @@ body {
 
 .block {
   position: relative;
+  opacity: 0;
   z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,6 +160,30 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+.show {
+  opacity: 1;
+  -webkit-animation: show 2s;
+          animation: show 2s;
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
@@ -217,6 +242,11 @@ body {
   border-bottom: 0.7px solid #f2f2f2;
   outline: none;
   background-color: transparent;
+}
+
+.form__input:-webkit-autofill, .form__input:-webkit-autofill:hover, .form__input:-webkit-autofill:focus, .form__input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000000s ease-in-out 0s;
+  transition: background-color 5000000s ease-in-out 0s;
 }
 
 .form__date-row {
@@ -337,4 +367,49 @@ body {
   font-size: 14px;
   line-height: 115%;
   color: #111111;
+}
+
+.shake {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  20%,
+  60% {
+    -webkit-transform: translateX(-6px);
+            transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    -webkit-transform: translateX(6px);
+            transform: translateX(6px);
+  }
 }

@@ -57,3 +57,41 @@ monthsList.addEventListener('input', () => {
   const dayss = getDaysQuantity(monthsList.value);
   generateDays(dayss);
 })
+
+// button disabled shaking
+const submitBtn = document.querySelector('.form__submit-btn');
+
+const inputEmail = document.querySelector('#form__email');
+const inputFName = document.querySelector('#f-name');
+const inputLName = document.querySelector('#l-name');
+const password = document.querySelector('#password');
+const passwordConfirm = document.querySelector('#confirm');
+
+submitBtn.addEventListener('click', () => {
+
+  if (!(
+    inputEmail.validity.valid &&
+    inputFName.validity.valid &&
+    inputLName.validity.valid &&
+    password.validity.valid &&
+    passwordConfirm.validity.valid
+  )) {
+    console.log('no!');
+    submitBtn.classList.add('shake');
+    setTimeout(() => {
+      submitBtn.classList.remove('shake');
+    }, 1000)
+  }
+
+});
+
+// opacity animation
+const blocks = document.querySelectorAll('.block');
+
+window.addEventListener('load', () => {
+  for (let i = 0; i < blocks.length; i += 1) {
+    setTimeout(() => {
+      blocks[i].classList.add('show');
+    }, i * 1000)
+  }
+})
