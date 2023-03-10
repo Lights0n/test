@@ -46,7 +46,7 @@ body {
 }
 
 .wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,8 +169,8 @@ body {
 .form__bgimage {
   display: block;
   position: absolute;
-  top: 23%;
-  left: 45.5%;
+  top: 20%;
+  left: 40%;
 }
 
 @media (max-width: 767.98px) {
@@ -223,6 +223,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
 }
 
 .form__input_day {
@@ -279,6 +280,11 @@ body {
   }
 }
 
+.form__bottom.response {
+  margin-top: 89px;
+  margin-bottom: 11px;
+}
+
 .form__login {
   letter-spacing: -0.4px;
 }
@@ -304,4 +310,31 @@ body {
   font-weight: 500;
   color: #5a61ed;
   cursor: pointer;
+}
+
+#form__email:invalid,
+#password:invalid,
+#confirm:invalid {
+  color: red;
+  border-bottom: 0.7px solid red;
+}
+
+.response__body {
+  padding: 178px 0px 62px 44px;
+}
+
+.response__title {
+  padding-bottom: 11px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 118%;
+  letter-spacing: -0.4px;
+  color: #111111;
+  white-space: nowrap;
+}
+
+.response__subtitle {
+  font-size: 14px;
+  line-height: 115%;
+  color: #111111;
 }

@@ -9,8 +9,8 @@
   <meta name="description" content="???THIS WEB-SITE IS ABOUT YOUR NEW CAREER STEP">
   <meta name="keywords" content="???web-programming, front-end, HTML, CSS, JS">
   <!-- FONT HERE -->
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,regular,500&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,regular,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:regular&display=swap" rel="stylesheet">
   <!-- FAVICON HERE -->
   <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon">
   <link type="Image/x-icon" href="/favicon.ico" rel="icon">
@@ -28,29 +28,37 @@
     </aside>
     <main class="main">
       <div class="main__body">
-        <form action="" class="form">
+        <form id="form" action="#" class="form" method="POST">
           <div class="form__title">New user?</div>
           <div class="form__descr">Use the form below to create your account.</div>
 
           <div class="form__name block">
             <div class="form__f-name-body">
               <label for="f-name" class="form__label">First Name</label>
-              <input type="text" id="f-name" class="form__input">
+              <input type="text" id="f-name" class="form__input" name="f-name" required>
             </div>
             <div class="form__l-name-body">
               <label for="l-name" class="form__label">Last Name</label>
-              <input type="text" id="l-name" class="form__input">
+              <input type="text" id="l-name" class="form__input" name="l-name" required>
             </div>
           </div>
 
           <div class="form__contacts block">
             <div class="form__nation-body">
               <label for="form__nation" class="form__label ">Nationality</label>
-              <input type="text" id="form__nation" class="form__input">
+              <select id="form__nation" class="form__input" name="nation" required>
+                <option value="American">American</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Swedish">Swedish</option>
+                <option value="Russian">Russian</option>
+                <option value="Ukranian">Ukranian</option>
+              </select>
             </div>
             <div class="form__email-body">
               <label for="form__email" class="form__label ">E-mail</label>
-              <input type="email" id="form__email" class="form__input">
+              <input type="email" id="form__email" class="form__input" name="email" required>
             </div>
           </div>
 
@@ -58,15 +66,35 @@
             <div class="form__date-body">
               <label for="form__day" class="form__label ">Date of Birth</label>
               <div class="form__date-row">
-                <input type="number" id="form__day" class="form__input form__input_day ">
-                <input type="number" class="form__input form__input_month">
-                <input type="number" class="form__input form__input_year">
+
+                <select id="form__day" class="form__input form__input_day" name="day" required>
+                </select>
+
+                <select class="form__input form__input_month" name="month" required>
+                  <option value="January">January</option>
+                  <option value="February">February</option>
+                  <option value="March">March</option>
+                  <option value="April">April</option>
+                  <option value="May">May</option>
+                  <option value="June">June</option>
+                  <option value="July">July</option>
+                  <option value="August">August</option>
+                  <option value="September">September</option>
+                  <option value="October">October</option>
+                  <option value="November">November</option>
+                  <option value="December">December</option>
+                </select>
+
+                <select class="form__input form__input_year" name="year" required>
+                  <option id="tempYear" value="2000">2000</option>
+                </select>
+
               </div>
             </div>
             <div class="form__gender-body">
               <label for="form__gender-m" class="form__label ">Gender</label>
               <div class="form__gender-row">
-                <input type="radio" id="form__gender-m" class="form__input form__input_gender-m" name="gender">
+                <input type="radio" id="form__gender-m" class="form__input form__input_gender-m" name="gender" required>
                 <label for="form__gender-m" class="form__gend-label">Male</label>
                 <input type="radio" id="form__gender-w" class="form__input form__input_gender-f" name="gender">
                 <label for="form__gender-w" class="form__gend-label">Female</label>
@@ -77,11 +105,11 @@
           <div class="form__passwords block">
             <div class="form__password-body">
               <label for="password" class="form__label ">Password</label>
-              <input id="password" type="password" class="form__input">
+              <input id="password" type="password" pattern=".{8,}" class="form__input" name="password" required>
             </div>
             <div class="form__confirm-body">
               <label for="confirm" class="form__label ">Confirm password</label>
-              <input id="confirm" type="password" class="form__input">
+              <input id="confirm" type="password" pattern=".{8,}" class="form__input" name="conf-password" required>
             </div>
           </div>
 
@@ -89,13 +117,15 @@
             <div class="form__login">Have an account? <span class="login-blue">Login</span></div>
             <input type="submit" value="Complete Signup" class="form__submit-btn">
           </div>
-          <img src="./assets/shape.svg" alt="" class="form__bgimage">
+          <object id="Shape" type="image/svg+xml" data="./assets/Shape.svg" class="form__bgimage"></object>
         </form>
       </div>
     </main>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"></script>
   <script src="./index.js"></script>
+  <script src="./response.js"></script>
 </body>
 
 </html>

@@ -40,7 +40,7 @@ body {
 }
 .wrapper {
    // min-height: 100%;
-   overflow-x: hidden;
+   overflow: hidden;
    display: flex;
    max-width: 800px;
    max-height: 600px;
@@ -130,8 +130,8 @@ body {
    &__bgimage {
       display: block;
       position: absolute;
-      top: 23%;
-      left: 45.5%;
+      top: 20%;
+      left: 40%;
       @media (max-width: 767.98px) {
          top: 40%;
          left: 35.5%;
@@ -178,6 +178,16 @@ body {
       border-bottom: 0.7px solid #f2f2f2;
       outline: none;
       background-color: transparent;
+
+      // &::before {
+      //    position: absolute;
+      //    right: 0;
+      //    top: 50%;
+      //    background-image: url("./assets/arrow.svg");
+      //    width: 8px;
+      //    height: 4px;
+      //    content: "";
+      // }
    }
 
    &__l-name-body {
@@ -200,6 +210,7 @@ body {
 
    &__date-row {
       display: flex;
+      gap: 10px;
    }
 
    &__input_day {
@@ -263,6 +274,10 @@ body {
          margin-top: 30px;
       }
    }
+   &__bottom.response {
+      margin-top: 89px;
+      margin-bottom: 11px;
+   }
 
    &__login {
       letter-spacing: -0.4px;
@@ -293,4 +308,31 @@ body {
    font-weight: 500;
    color: #5a61ed;
    cursor: pointer;
+}
+
+#form__email:invalid,
+#password:invalid,
+#confirm:invalid {
+   color: red;
+   border-bottom: 0.7px solid red;
+}
+
+.response__body {
+   padding: 178px 0px 62px 44px;
+}
+
+.response__title {
+   padding-bottom: 11px;
+   font-weight: 500;
+   font-size: 22px;
+   line-height: 118%;
+   letter-spacing: -0.4px;
+   color: #111111;
+   white-space: nowrap;
+}
+.response__subtitle {
+   font-size: 14px;
+   line-height: 115%;
+
+   color: #111111;
 }
