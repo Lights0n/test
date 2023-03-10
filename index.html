@@ -105,11 +105,17 @@
           <div class="form__passwords block">
             <div class="form__password-body">
               <label for="password" class="form__label ">Password</label>
-              <input id="password" type="password" pattern=".{8,}" class="form__input" name="password" required>
+              <input id="password" type="password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$" class="form__input"
+                oninvalid="this.setCustomValidity('Пароль пользователя должен содержать от 8 символов, заглавные и строчные буквы, а также цифры.')"
+                name="password" required>
             </div>
             <div class="form__confirm-body">
               <label for="confirm" class="form__label ">Confirm password</label>
-              <input id="confirm" type="password" pattern=".{8,}" class="form__input" name="conf-password" required>
+              <input id="confirm" type="password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$" class="form__input"
+                oninvalid="this.setCustomValidity('Пароль пользователя должен содержать от 8 символов, заглавные и строчные буквы, а также цифры.')"
+                name="conf-password" required>
             </div>
           </div>
 
