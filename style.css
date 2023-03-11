@@ -341,6 +341,7 @@ body {
   line-height: 18px;
   color: white;
   background-color: #5a61ed;
+  cursor: pointer;
 }
 
 .login-blue {

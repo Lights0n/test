@@ -75,7 +75,7 @@ submitBtn.addEventListener('click', () => {
     inputLName.validity.valid &&
     password.validity.valid &&
     passwordConfirm.validity.valid
-  )) {
+  ) && submitBtn.value === 'Complete Signup') {
     submitBtn.classList.add('shake');
     setTimeout(() => {
       submitBtn.classList.remove('shake');
