@@ -114,9 +114,9 @@ body {
 }
 .block {
    position: relative;
+   display: flex;
    opacity: 0;
    z-index: 2;
-   display: flex;
    margin-top: 15px;
    gap: 13px;
 
@@ -140,7 +140,8 @@ body {
       opacity: 1;
    }
 }
-
+.form {
+}
 .form {
    position: relative;
    &__bgimage {
@@ -164,10 +165,11 @@ body {
    }
 
    &__descr {
+      padding-bottom: 4px;
+
       font-size: 14px;
       line-height: 16px;
       font-weight: 300;
-      padding-bottom: 4px;
       letter-spacing: 0.11px;
    }
 
@@ -179,8 +181,8 @@ body {
 
    &__label {
       padding-bottom: 5px;
+
       font-size: 12px;
-      // line-height: 14px;
       line-height: 116.66%;
       font-weight: 300;
       letter-spacing: -0.28px;
@@ -191,9 +193,10 @@ body {
       position: relative;
       display: block;
       padding: 5px 0 6px;
+
+      background-color: transparent;
       border-bottom: 0.7px solid #f2f2f2;
       outline: none;
-      background-color: transparent;
    }
 
    &__input:-webkit-autofill,
@@ -258,7 +261,6 @@ body {
       width: auto;
 
       font-size: 14px;
-      // line-height: 16px;
       line-height: 114%;
       font-weight: 400;
    }
@@ -280,9 +282,10 @@ body {
    }
 
    &__bottom {
-      margin-top: 99px;
       display: flex;
       align-items: center;
+      margin-top: 99px;
+
       @media (max-width: 767.98px) {
          margin-top: 30px;
       }
@@ -291,10 +294,13 @@ body {
       margin-top: 89px;
       margin-bottom: 11px;
    }
+   &__bottom.login {
+      flex-direction: column-reverse;
+      align-items: start;
+   }
 
    &__login {
       letter-spacing: -0.4px;
-      // padding: 0 0 1px 0px;
    }
 
    &__submit-btn {
@@ -350,6 +356,7 @@ body {
    color: #111111;
 }
 
+// button animation
 .shake {
    animation-name: shake;
    animation-duration: 0.5s;
@@ -368,4 +375,28 @@ body {
    80% {
       transform: translateX(6px);
    }
+}
+
+.block_register {
+   position: relative;
+   display: flex;
+   padding: 15px 0;
+   opacity: 1;
+   z-index: 2;
+   margin-top: 15px;
+   gap: 13px;
+
+   * {
+      // width: 100%;
+   }
+   @media (max-width: 767.98px) {
+      flex-direction: column;
+   }
+}
+
+.log-body {
+   display: none;
+}
+.hidden {
+   display: none;
 }

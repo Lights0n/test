@@ -1,6 +1,6 @@
 // SVG animation
 const svgIcon = new Vivus(
-  'Shape',
+  'shape',
   {
     type: 'sync',
     duration: 400,
@@ -76,7 +76,6 @@ submitBtn.addEventListener('click', () => {
     password.validity.valid &&
     passwordConfirm.validity.valid
   )) {
-    console.log('no!');
     submitBtn.classList.add('shake');
     setTimeout(() => {
       submitBtn.classList.remove('shake');
@@ -92,6 +91,67 @@ window.addEventListener('load', () => {
   for (let i = 0; i < blocks.length; i += 1) {
     setTimeout(() => {
       blocks[i].classList.add('show');
-    }, i * 1000)
+    }, i * 200)
   }
+})
+
+
+
+// login/register toggle
+const loginBtn = document.querySelector('.login-blue');
+
+const leftTitle = document.querySelector('.left__title');
+const formTitle = document.querySelector('.form__title');
+const formDescr = document.querySelector('.form__descr');
+const formQuestion = document.querySelector('.form__have-acc');
+
+const nameBlock = document.querySelector('.form__name');
+const Nation = document.querySelector('.form__nation-body');
+const GenderBlock = document.querySelector('.form__date-gender');
+const confirmPass = document.querySelector('.form__confirm-body');
+const bottomBlock = document.querySelector('.form__bottom');
+const submitButton = document.querySelector('.form__submit-btn');
+
+
+
+function changeToLogin() {
+  loginBtn.textContent = 'Register'
+  formQuestion.textContent = 'Don`t have an account?'
+  leftTitle.textContent = 'Sign in'
+  formTitle.textContent = 'Login'
+  formDescr.textContent = 'Use your e-mail and password to login'
+
+  nameBlock.classList.add('hidden');
+  Nation.classList.add('hidden');
+  GenderBlock.classList.add('hidden');
+  confirmPass.classList.add('hidden');
+  bottomBlock.classList.add('login');
+  submitButton.value = 'Complete Sign in'
+}
+
+function changeToRegister() {
+  loginBtn.textContent = 'Login'
+  formQuestion.textContent = 'Have an account?'
+  leftTitle.textContent = 'Sign up'
+  formTitle.textContent = 'New User?'
+  formDescr.textContent = 'Use the form below to create your account.'
+
+  nameBlock.classList.remove('hidden');
+  Nation.classList.remove('hidden');
+  GenderBlock.classList.remove('hidden');
+  confirmPass.classList.remove('hidden');
+  bottomBlock.classList.remove('login');
+  submitButton.value = 'Complete Signup'
+
+}
+
+loginBtn.addEventListener('click', () => {
+  if (loginBtn.textContent === 'Login') {
+    changeToLogin()
+  }
+  else if (loginBtn.textContent === 'Register') {
+    changeToRegister()
+  }
+
+
 })
